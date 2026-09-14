@@ -54,56 +54,34 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* Middle & Right Column: Selected Expertise + Atmospheric Artwork */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
-            {/* Selected Expertise List */}
-            <div className="sm:col-span-8 space-y-4">
-              <h3 className="text-xs font-mono font-semibold tracking-wider text-zinc-400 uppercase mb-5">
-                Selected Expertise
-              </h3>
+          {/* Right Column: Selected Expertise */}
+          <div className="lg:col-span-6 space-y-4">
+            <h3 className="text-xs font-mono font-semibold tracking-wider text-zinc-400 uppercase mb-5">
+              Selected Expertise
+            </h3>
 
-              <div className="space-y-4">
-                {selectedExpertise.map((item, idx) => {
-                  const IconComponent = item.icon;
-                  return (
-                    <div
-                      key={idx}
-                      className="group flex items-start gap-4 p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-cinematic-cyan/30 transition-all duration-300"
-                    >
-                      <div className="w-10 h-10 rounded-xl bg-cinematic-cyan/10 border border-cinematic-cyan/20 flex items-center justify-center text-cinematic-cyan shrink-0 transition-transform group-hover:scale-105">
-                        <IconComponent className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-bold text-white group-hover:text-cinematic-cyan transition-colors">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs text-zinc-400 mt-0.5">
-                          {item.subtitle}
-                        </p>
-                      </div>
+            <div className="space-y-4">
+              {selectedExpertise.map((item, idx) => {
+                const IconComponent = item.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="group flex items-start gap-4 p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.05] hover:border-cinematic-cyan/30 transition-all duration-300"
+                  >
+                    <div className="w-10 h-10 rounded-xl bg-cinematic-cyan/10 border border-cinematic-cyan/20 flex items-center justify-center text-cinematic-cyan shrink-0 transition-transform group-hover:scale-105">
+                      <IconComponent className="w-5 h-5" />
                     </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Atmospheric Visual Accent */}
-            <div className="sm:col-span-4 relative rounded-2xl overflow-hidden aspect-[3/4] hidden sm:flex flex-col justify-end p-5 bg-gradient-to-t from-black via-zinc-900 to-zinc-950 border border-white/10 shadow-2xl">
-
-              <div className="relative z-10 space-y-1 text-right">
-                <div className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
-                  Better
-                </div>
-                <div className="text-xs font-bold text-white tracking-wider uppercase">
-                  Code
-                </div>
-                <div className="text-[10px] font-mono tracking-widest text-cinematic-cyan uppercase">
-                  Safer
-                </div>
-                <div className="text-xs font-bold text-white tracking-wider uppercase">
-                  World
-                </div>
-              </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-white group-hover:text-cinematic-cyan transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-0.5">
+                        {item.subtitle}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
