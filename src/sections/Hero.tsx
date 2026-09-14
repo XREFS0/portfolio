@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Code2, ShieldCheck, Briefcase, Zap, Mouse } from 'lucide-react';
+import { ArrowRight, Mouse } from 'lucide-react';
 import { mailtoUrl } from '../data/socialLinks';
 
 export const Hero: React.FC = () => {
@@ -120,70 +120,6 @@ export const Hero: React.FC = () => {
             {/* Seamless Vignette Gradients */}
             <div className="absolute inset-0 bg-gradient-to-t from-cinematic-bg via-transparent to-transparent opacity-95" />
             <div className="absolute inset-0 bg-gradient-to-r from-cinematic-bg/60 via-transparent to-cinematic-bg/60" />
-
-            {/* Floating Glass Badge 1: Projects (Top Left) */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute top-6 left-2 sm:left-4 p-3 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-3"
-            >
-              <div className="w-8 h-8 rounded-xl bg-cinematic-cyan/15 border border-cinematic-cyan/30 flex items-center justify-center text-cinematic-cyan">
-                <Code2 className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-bold text-white">Projects</div>
-                <div className="text-[10px] text-zinc-400">Building ideas</div>
-              </div>
-            </motion.div>
-
-            {/* Floating Glass Badge 2: Certificates (Top Right) */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="absolute top-10 right-2 sm:right-4 p-3 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-3"
-            >
-              <div className="w-8 h-8 rounded-xl bg-cinematic-cyan/15 border border-cinematic-cyan/30 flex items-center justify-center text-cinematic-cyan">
-                <ShieldCheck className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-bold text-white">Certificates</div>
-                <div className="text-[10px] text-zinc-400">Always learning</div>
-              </div>
-            </motion.div>
-
-            {/* Floating Glass Badge 3: Experience (Middle Right) */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="absolute top-1/2 -translate-y-1/2 right-1 sm:right-2 p-3 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-3"
-            >
-              <div className="w-8 h-8 rounded-xl bg-cinematic-blue/15 border border-cinematic-blue/30 flex items-center justify-center text-blue-400">
-                <Briefcase className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-bold text-white">Experience</div>
-                <div className="text-[10px] text-zinc-400">Growing every day</div>
-              </div>
-            </motion.div>
-
-            {/* Floating Glass Badge 4: Tech Stack (Bottom Right) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="absolute bottom-8 right-3 sm:right-6 p-3 rounded-2xl bg-black/60 backdrop-blur-xl border border-white/10 shadow-2xl flex items-center gap-3"
-            >
-              <div className="w-8 h-8 rounded-xl bg-cinematic-cyan/15 border border-cinematic-cyan/30 flex items-center justify-center text-cinematic-cyan">
-                <Zap className="w-4 h-4" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-bold text-white">Tech Stack</div>
-                <div className="text-[10px] text-zinc-400">Modern &amp; powerful</div>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
       </div>
